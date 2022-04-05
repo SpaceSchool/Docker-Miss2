@@ -20,7 +20,7 @@ services:
     image: nginx:alpine
     deploy:
       mode: replicated
-      replicas: 2
+      replicas: 3
     restart: unless-stopped
     tty: true
     expose:
@@ -37,6 +37,9 @@ services:
   
   Gorafi:
     image: nginx:alpine
+    deploy:
+      mode: replicated
+      replicas: 3
     restart: unless-stopped
     tty: true
     expose:
